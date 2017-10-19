@@ -1,0 +1,166 @@
+html *
+{
+    font-size: 1em !important;
+    font-family: sans-serif;
+}
+
+.rlicon{
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome !important;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    font-size: 0.8em;
+
+}
+
+.rltoggle-on:before{
+    color: #000000;
+    /*content: "\f147";*/
+    content: "\f054";
+}
+
+.rltoggle-off:before{
+    color: #000000;
+    content: "\f078";
+    /*content: "\f196";*/
+}
+
+.rlinsert:before{
+    color: #000000;
+    content: "\f067";
+}
+
+.rlinsertroot:before{
+    color: #ffffff;
+    background: #000000;
+    content: "\f067";
+}
+
+.rldelete:before{
+    color: #000000;
+    content: "\f068";
+}
+
+.rledit:before{
+    color: #000000;
+    content: "\f040";
+}
+
+.rlsave:before{
+    color: #000000;
+    content: "\f0c7";
+}
+
+.rlcancel:before{
+    color: #000000;
+    content: "\f00d";
+}
+
+.rlinput{
+    background: #BBBBBB;
+}
+
+.rlinput-change{
+    background: none;
+    background: #ffdce1;
+}
+
+
+div.console {
+    background-color: lightyellow;
+    width: 90%;
+    height: 30%;
+    color: black;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.7em;
+}
+
+div.table {
+    background-color: #fafafa;
+    width: 90%;
+    height: 50%;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+table.rltable{
+    border-collapse: collapse;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-left: 0;
+    border-right: 0;
+    -webkit-border-horizontal-spacing: 0;
+
+}
+
+tbody.rlbody{
+
+}
+
+tbody tr.rlbody:nth-child(even){
+    /*background-color: #f9f9f9;*/
+
+}
+
+tbody tr.rlbody:nth-child(odd){
+    /*background-color: #d9edf7;*/
+
+}
+
+tbody td.rlbody{
+    border-color: #C1E0FF;
+    border-width: 1px;
+    border-style: solid;
+}
+
+tbody tr.rlhead{
+    background-color: #333333;
+    color: white ;
+}
+
+thead.rlhead{
+}
+
+thead tr.rlhead{
+}
+
+thead th.rlhead{
+    border-color: #C1E000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+tfoot tr.rlhead{
+
+}
+
+tfoot td.rlfoot{
+    border-color: #C100FF;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rlinput-off{
+    background: none;
+    border: none;
+    color: #333333;
+}
+
+.rlinput-on{
+    border-width: 1px;
+}
+
+.rlinput-change{
+    background: none;
+    background: #ffdce1;
+}
+
+

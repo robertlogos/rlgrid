@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RLGrid Demo</title>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="rlgrid.css">
+    <script type="text/javascript" src="rlgrid.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var grid = $('#tabledata').rlgrid(
+                    {
+                        bCollapsed : true,
+                        sLocale : 'ES',
+                        bEdit: true,
+                        bInsert: true,
+                        bDelete: true,
+                        bConfirmDelete: true,
+                        iMaxlength: 64,
+                        bShowErrorCodes: false
+                    }
+            );
+        });
+    </script>
+
+</head>
+<body>
+
+<h2>RLGRID DEMO</h2> <br>
+
+
+<div id="thediv" width="75%">
+
+    <table id="tabledata">
+        <thead>
+            <tr>
+                <th data-level="1" data-editable="false" data-property="id">ID</th>
+                <th data-level="1" data-editable="true" data-property="area">Área</th>
+                <th data-level="1" data-property="area_desc">Desc. Área</th>
+                <th data-level="2" data-editable="true" data-property="subarea">Subárea</th>
+                <th data-level="2" data-editable="true" data-property="subarea_desc">Desc. Subárea</th>
+            </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td>ID</td>
+            <td>Área</td>
+            <td>Área</td>
+            <td>Subárea</td>
+            <td>Desc. Subárea</td>
+        </tr>
+        </tfoot>
+        <tbody>
+            <tr data-id="11" data-level="1">
+                <td>ID-11</td>
+                <td>Operaciones</td>
+                <td>Descripción del área</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr data-id="111" data-level="2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Mantenimiento</td>
+                <td>Desc. Mantenimiento</td>
+            </tr>
+            <tr data-id="117" data-level="2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Desarrollo</td>
+                <td>Development for the people</td>
+            </tr>
+            <tr data-id="134" data-level="2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Producción</td>
+                <td>Desc. Producción</td>
+            </tr>
+            <tr data-id="13" data-level="1">
+                <td>ID-13</td>
+                <td>Marketing</td>
+                <td>Desc Marketing</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr data-id="136" data-level="2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Hijo del marketing</td>
+                <td>Desc hijo marketing</td>
+            </tr>
+            <tr data-id="19" data-level="1">
+                <td>ID-19</td>
+                <td>Comercial</td>
+                <td>Desc Comercial</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+<!--
+    <table id="tabledata">
+        <thead>
+        <tr>
+            <th data-level="1" data-editable="false" data-property="id">ID</th>
+            <th data-level="1" data-maxlength="5" data-required="true" data-editable="true" data-property="area">Área</th>
+            <th data-level="1" data-property="area_desc">Desc. Área</th>
+            <th data-level="2" data-required="true" data-editable="true" data-maxlength="10" data-property="subarea">Subárea</th>
+            <th data-level="2" data-required="true" data-editable="true" data-property="subarea_desc">Desc. Subárea</th>
+            <th data-level="3" data-required="true" data-editable="true" data-property="Miembros">Miembros</th>
+
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td>ID</td>
+            <td>Área</td>
+            <td>Área</td>
+            <td>Subárea</td>
+            <td>Desc. Subárea</td>
+            <td>Miembros</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr data-id="11" data-level="1">
+            <td>ID-11</td>
+            <td>Operaciones</td>
+            <td>Descripción del área</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-id="111" data-level="2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Mantenimiento</td>
+            <td>Desc. Mantenimiento</td>
+            <td></td>
+        </tr>
+        <tr data-id="117" data-level="2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Desarrollo</td>
+            <td>Development for the people</td>
+            <td></td>
+        </tr>
+        <tr data-id="134" data-level="2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Producción</td>
+            <td>Desc. Producción</td>
+            <td></td>
+        </tr>
+        <tr data-id="13" data-level="1">
+            <td>ID-13</td>
+            <td>Marketing</td>
+            <td>Desc Marketing</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-id="136" data-level="2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Hijo del marketing</td>
+            <td>Desc hijo marketing</td>
+            <td></td>
+        </tr>
+        <tr data-id="21" data-level="3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Pedro</td>
+        </tr>
+        <tr data-id="22" data-level="3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Manolo</td>
+        </tr>
+        <tr data-id="19" data-level="1">
+            <td>ID-19</td>
+            <td>Comercial</td>
+            <td>Desc Comercial</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-id="14" data-level="1">
+            <td>ID-13</td>
+            <td>RRHH</td>
+            <td>Recursos Humanos</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+-->
+</div>
+
+
+
+</body>
+
+</html>
